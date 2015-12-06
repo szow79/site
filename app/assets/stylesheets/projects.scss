@@ -1,0 +1,65 @@
+@import 'mixin';
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.debug {
+  border: 1px solid red;
+}
+
+.proj-container {
+  background-color: $nav-color;
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: center;
+  width: 100%;
+}
+
+.proj {
+
+  @include grayscale(1);
+  display: none;
+
+  .project-name {
+  }
+
+  &:hover{
+    @include grayscale(0);
+  }
+
+  img {
+    width: 100%; 
+  }
+}
+
+
+// need sass refactor
+@media (min-width: 449px) {
+  .proj {
+    width: 50%;
+  }
+}
+
+@media (min-width: 674px) {
+  .proj {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 899px) {
+  .proj {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1124px) {
+  .proj {
+    width: 20%;
+  }
+}
+
+@media (min-width: 1349px) {
+  .proj {
+    width: 16.67%;
+  }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mysite</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <!-- mobile view -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <header class='header-nav'>
+    <div class='nav-btn'><%= link_to 'Home', projects_path %></div>
+    <div class='nav-btn'>Contact</div>
+  </header>
+
+<%= yield %>
+
+</body>
+</html>
