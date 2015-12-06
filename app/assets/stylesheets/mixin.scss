@@ -1,0 +1,11 @@
+$nav-color: white;
+$bg-color: gold;
+
+@mixin grayscale($precent) {
+  filter: grayscale($precent);
+  -webkit-filter: grayscale($precent);
+  -moz-filter: grayscale($precent);
+  filter: grayscale($precent);
+  filter: gray;
+  -webkit-filter: grayscale($precent);
+}

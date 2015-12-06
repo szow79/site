@@ -1,0 +1,61 @@
+@import 'mixin';
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.header-nav {
+  background-color: $nav-color;
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+}
+
+.nav-btn {
+  // margin: 0 2%;
+  font-size: 1.5rem;
+  color: $bg-color;
+  border: 2px solid $nav-color;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  
+    &:hover {
+      background-color: $nav-color;
+    }
+    &:visited {
+      color: $bg-color;
+    }
+    &:link {
+      color: $bg-color;
+    }
+  }
+}
+
+// tablet
+// @media (min-width: 769px){
+//   .container {
+//     flex-direction: row-reverse;
+//   }
+//   .item {
+//     color: red;
+//   }
+// }
+
+// desktop
+// @media (min-width: 961px){
+//   .proj-container {
+
+//   }
+
+//   .proj {
+//     color: red;
+
+//     .project-name {
+//       display: block;
+//     }
+
+//   }
+// }

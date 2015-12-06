@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class='proj-container'>
+  <% @projects.shuffle.each do |project| %>
+    <div class='proj <%= 'proj-' + project.id.to_s %>'>
+      
+      <% if project.link %>
+        <%= link_to image_tag(project.name + '.png'), project, data: { no_turbolink: true } %>
+      <% else %>
+        <%= image_tag(project.name + ".png") %>
+      <% end %>
+
+      <div class='project-name'><%= project.name %></div>
+      
+      <% if false %>
+        <%= link_to 'Edit', edit_project_path(project) %>
+        <%= link_to 'Destroy', project, method: :delete %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<br>
+
+<%= link_to 'New Project', new_project_path %>
+
+
+
+<!-- backup for image link to each project link_to image_tag("test.png"), project -->
