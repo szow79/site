@@ -19,12 +19,14 @@
 
   @include grayscale(1);
   display: none;
+  opacity: 0.8;
 
   .project-name {
   }
 
   &:hover{
     @include grayscale(0);
+    opacity: 1;
   }
 
   img {
