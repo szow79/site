@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(version: 20151203231748) do
   create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.boolean  "link"
+    t.text     "external_link"
     t.boolean  "unique"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end
