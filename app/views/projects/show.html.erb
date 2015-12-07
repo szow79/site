@@ -2,20 +2,19 @@
 
 
 <% if @project.unique %>
-  <%= render "projects/unique/#{@project.name}/#{@project.name}" %>
-
+  <div class='showcase'>
+    <div>
+      <%= render "projects/unique/#{@project.name}" %>
+    </div>
 <% else %>
-  <p>
-    <strong>Name:</strong>
-    <%= @project.name %>
-  </p>
+    <p>
+      <strong>Name:</strong>
+      <%= @project.name %>
+    </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @project.description %>
-  </p>
+    <p>
+      <strong>Description:</strong>
+      <%= @project.description %>
+    </p>
+  </div>
 <% end %>
-
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>

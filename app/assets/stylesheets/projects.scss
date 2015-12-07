@@ -11,57 +11,35 @@
   background-color: $nav-color;
   display: flex;
   flex-wrap: wrap;
-  // justify-content: center;
   width: 100%;
 }
 
 .proj {
-
-  @include grayscale(1);
   display: none;
   opacity: 0.8;
 
   .project-name {
   }
 
-  &:hover{
-    @include grayscale(0);
-    opacity: 1;
-  }
-
   img {
     width: 100%; 
   }
+
 }
 
-
-// need sass refactor
-@media (min-width: 449px) {
-  .proj {
-    width: 50%;
-  }
-}
-
-@media (min-width: 674px) {
-  .proj {
-    width: 33.33%;
-  }
-}
-
-@media (min-width: 899px) {
-  .proj {
-    width: 25%;
-  }
-}
-
-@media (min-width: 1124px) {
-  .proj {
-    width: 20%;
-  }
-}
-
-@media (min-width: 1349px) {
-  .proj {
-    width: 16.67%;
+// media query
+$img-min-width: 225px;
+@for $i from 2 through 6 {
+  @media (min-width: $img-min-width * $i - 1) {
+    .proj {
+      width: 100% / $i;
+      @if $i == 3 {
+        @include grayscale(1);       
+        &:hover{
+          @include grayscale(0);
+          opacity: 1;
+        }
+      }  
+    }
   }
 }
