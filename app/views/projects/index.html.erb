@@ -2,7 +2,7 @@
 
 
 <div class='proj-container'>
-  <% @projects.shuffle.each do |project| %>
+  <% @projects.each do |project| %>
     <div class='proj <%= 'proj-' + project.id.to_s %>'>
       
       <% if project.unique %>
