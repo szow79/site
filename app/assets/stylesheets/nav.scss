@@ -4,24 +4,49 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.header-nav {
-  background-color: #333333;
-  height: 60px;
+.nav-header {
+  background-color: $nav-color;
+}
 
-
+.nav-icon {
+  display: flex;
+  justify-content: center;
+  img {
+    margin: 20px;
+    width: 30px;
+  }
+  & a:hover {
+    background-color: transparent;
+    -ms-transform: scale(1.2,1.2);
+    -webkit-transform: scale(1.2,1.2);
+    transform: scale(1.2,1.2);
+    -ms-: transform 0.1s ease-in-out;
+    -webkit-transition: transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out;
+  }
 }
 
 .nav-btn {
   margin: 0;
   padding: 4% 4%;
-  font-size: 2.6rem;
+  font-size: 3rem;
+  font-weight: bold;
   color: $bg-color;
   text-align: center;
   border: none;
 
+  &:hover {
+    -ms-transform: scale(1.2,1.2);
+    -webkit-transform: scale(1.2,1.2);
+    transform: scale(1.2,1.2);
+    -ms-: transform 0.1s ease-in-out;
+    -webkit-transition: transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out;
+  }
+
   a {
     text-decoration: none;
-  
+    
     &:hover {
       background-color: $nav-color;
     }
@@ -35,7 +60,6 @@
 }
 
 @media (min-width: 700px) {
-  .welcome,
   .nav-btn {
     padding: 2% 4%;
   }

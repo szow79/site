@@ -11,12 +11,26 @@
 </head>
 <body>
 
-  <header class='header-nav'>
-    <div class='nav-btn'><%= link_to 'Home', projects_path %></div>
+  <header class='nav-header'>
+    <div class='nav-btn'>
+      <%= link_to 'Welcome', root_path %>
+    </div>
+    <div class='nav-icon'>
+      <%= link_to image_tag('linkedin.png'), 'https://www.linkedin.com/in/szow79' %>
+      <%= link_to image_tag('github.png'), 'https://github.com/szow79' %>
+    </div>
   </header>
 
 
-<%= yield %>
+ <div class='body'> 
+   <%= yield %>
+ </div>
+
 
 </body>
+  <% unless @project %>
+    <footer>
+      <h3>Designed by Si Cheng Zhou</h3>
+    </footer>
+  <% end %>
 </html>

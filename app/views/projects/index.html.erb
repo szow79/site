@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-
 <div class='proj-container'>
   <% @projects.each do |project| %>
-    <div class='proj <%= 'proj-' + project.id.to_s %>'>
-      
+    <div class='proj <%= 'linky' if project.unique || project.external_link != '' %>'>
+
       <% if project.unique %>
         <%= link_to image_tag(project.name + '.png'), project, data: { no_turbolink: true } %>
       <% elsif project.external_link.length > 0 %>
@@ -13,13 +12,8 @@
         <%= image_tag(project.name + ".png") %>
       <% end %>
       
-      <% if false %>
-        <%= link_to 'Edit', edit_project_path(project) %>
-        <%= link_to 'Destroy', project, method: :delete %>
-      <% end %>
+  
     </div>
   <% end %>
 </div>
 <br>
-
-<%= link_to 'New Project', new_project_path %>

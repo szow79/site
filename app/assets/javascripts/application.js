@@ -17,5 +17,4 @@
 
 $(document).on('page:change', function(){
   $('.proj').fadeIn(1200);
-
 })

@@ -7,23 +7,33 @@
   border: 1px solid red;
 }
 
+.body {
+  background-color: $body;
+}
+
 .proj-container {
-  background-color: $nav-color;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: space-between;
 }
 
 .proj {
+  margin-top: 3.4%;
   display: none;
-  opacity: 0.9;
+  background-color: white;
+  position: relative;
+  bottom: -5px;
 
   img {
     width: 100%; 
+    opacity: 0.6;
+    &:hover {
+      opacity: 1;
+    }
+    // transform: scale(1,1.05);
   }
-
   a {
-    height: 0;
     &:hover {
       background-color: white;
     }
@@ -32,17 +42,37 @@
 
 // media query
 $img-min-width: 225px;
-@for $i from 2 through 6 {
+$j: 1%;
+$k: 3.4%;
+$l: 0.5%;
+@for $i from 2 through 5 {
   @media (min-width: $img-min-width * $i - 1) {
     .proj {
-      width: 100% / $i;
-      @if $i == 3 {
-        @include grayscale(1);       
+      width: 97% / $i;
+      margin-top: $k - $j;
+      $j: $j + 1%;
+
+      @if $i >= 3 {
+        $j: $j - $l;
+        $l: $l * 1.5;
+        @include grayscale(0.9);       
         &:hover{
           @include grayscale(0);
-          opacity: 1;
+        }
+      }
+
+      @if $i == 3 {
+        @include grayscale(0.9);       
+        &:hover{
+          @include grayscale(0);
         }
       }  
+    }
+
+    @if $i >= 3 {
+      .body {
+        padding: 15px 0;
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
 $nav-color: white;
-$bg-color: white;
+$bg-color: #F76E39;
+$body: #676BB7;
 
 @mixin grayscale($precent) {
   filter: grayscale($precent);
