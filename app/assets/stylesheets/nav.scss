@@ -4,8 +4,26 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.header-nav {
+.nav-header {
   background-color: $nav-color;
+}
+
+.nav-icon {
+  display: flex;
+  justify-content: center;
+  img {
+    margin: 20px;
+    width: 30px;
+  }
+  & a:hover {
+    background-color: transparent;
+    -ms-transform: scale(1.2,1.2);
+    -webkit-transform: scale(1.2,1.2);
+    transform: scale(1.2,1.2);
+    -ms-: transform 0.1s ease-in-out;
+    -webkit-transition: transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out;
+  }
 }
 
 .nav-btn {
