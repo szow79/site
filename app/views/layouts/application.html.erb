@@ -6,11 +6,13 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
+  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+ 
   <!-- mobile view -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
 
+<body>
   <header class='nav-header'>
     <div class='nav-btn'>
       <%= link_to 'Welcome', root_path %>
@@ -23,11 +25,9 @@
     </div>
   </header>
 
-
- <div class='body'> 
-   <%= yield %>
- </div>
-
+   <div class='body'> 
+     <%= yield %>
+   </div>
 
 </body>
   <% unless @project %>

@@ -58,7 +58,7 @@ $l: 0.5%;
       @if $i >= 3 {
         $j: $j - $l;
         $l: $l * 1.5;
-        @include grayscale(0.9);       
+        @include grayscale(0.3);       
         &:hover{
           @include grayscale(0);
         }

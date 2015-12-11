@@ -18,12 +18,17 @@
 $(document).on('page:change', function(){
   $('.proj').fadeIn(1200);
 
+  // change img on hover
   $('.original').mouseenter(function(){
-    $(".original").hide();
-    $(".hover").fadeIn(500);
+    var temp = $(this).attr('class').split(' ')[1];
+    $(this).hide();
+    $('.' + temp + '2').fadeIn(500);
   })
+
+  // change img on mouseout
   $(".hover").mouseout(function(){
-    $(".hover").hide();
-    $(".original").fadeIn(500);
+    var temp = $(this).attr('class').split(' ')[1];
+    $(this).hide();
+    $('.' + temp.split('').splice(0, temp.length - 1).join('')).fadeIn(500);
   })
 })

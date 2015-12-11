@@ -9,12 +9,8 @@
       <% elsif project.external_link.length > 0 %>
         <%= link_to image_tag(project.name + '.png'), project.external_link %>
       <% else %>
-        <% if project.id == 7 %>
-          <%= image_tag(project.name + '.png', :class => 'original') %>
-          <%= image_tag('table-unfold.png', :class => 'hover') if project.id == 7 %>
-        <% else %>
-          <%= image_tag(project.name + '.png') %>
-        <% end %>
+        <%= image_tag(project.name + '.png', :class => 'original ' + project.name) %>
+        <%= image_tag(project.name + '2.png', :class => 'hover ' + project.name + '2') %>
       <% end %>
   
     </div>
