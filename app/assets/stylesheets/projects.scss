@@ -23,6 +23,9 @@
 }
 
 .proj {
+  -webkit-box-shadow: 4px 9px 20px 0px rgba(184,184,184,1);
+  -moz-box-shadow: 4px 9px 20px 0px rgba(184,184,184,1);
+  box-shadow: 4px 9px 20px 0px rgba(184,184,184,1);
   margin-top: 3.4%;
   display: none;
   background-color: transparent;
