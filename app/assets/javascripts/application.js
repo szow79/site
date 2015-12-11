@@ -17,4 +17,13 @@
 
 $(document).on('page:change', function(){
   $('.proj').fadeIn(1200);
+
+  $('.original').mouseenter(function(){
+    $(".original").hide();
+    $(".hover").fadeIn(500);
+  })
+  $(".hover").mouseout(function(){
+    $(".hover").hide();
+    $(".original").fadeIn(500);
+  })
 })
