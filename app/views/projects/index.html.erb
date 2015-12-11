@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class='proj-container'>
-  <% @projects.each do |project| %>
+  <% @projects.reverse.each do |project| %>
     <div class='proj proj-<%= project.id %>'>
 
       <% if project.unique %>
