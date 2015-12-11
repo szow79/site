@@ -11,6 +11,10 @@
   background-color: $body;
 }
 
+.hover {
+  display: none;
+}
+
 .proj-container {
   display: flex;
   flex-wrap: wrap;
@@ -21,21 +25,20 @@
 .proj {
   margin-top: 3.4%;
   display: none;
-  background-color: white;
+  background-color: transparent;
   position: relative;
   bottom: -5px;
 
   img {
     width: 100%; 
-    opacity: 0.6;
+    opacity: 0.8;
     &:hover {
       opacity: 1;
     }
-    // transform: scale(1,1.05);
   }
   a {
     &:hover {
-      background-color: white;
+      background-color: transparent;
     }
   }
 }
@@ -55,18 +58,11 @@ $l: 0.5%;
       @if $i >= 3 {
         $j: $j - $l;
         $l: $l * 1.5;
-        @include grayscale(0.9);       
+        @include grayscale(0.3);       
         &:hover{
           @include grayscale(0);
         }
       }
-
-      @if $i == 3 {
-        @include grayscale(0.9);       
-        &:hover{
-          @include grayscale(0);
-        }
-      }  
     }
 
     @if $i >= 3 {

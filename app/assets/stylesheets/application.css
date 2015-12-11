@@ -16,3 +16,7 @@
 .debug {
   border: 1px solid red;
 }
+
+body {
+  font-family: 'Arvo', serif;
+}

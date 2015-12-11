@@ -15,6 +15,7 @@
     margin: 20px;
     width: 30px;
   }
+
   & a:hover {
     background-color: transparent;
     -ms-transform: scale(1.2,1.2);
@@ -27,7 +28,7 @@
 }
 
 .nav-btn {
-  margin: 0;
+  margin-top: 10px;
   padding: 4% 4%;
   font-size: 3rem;
   font-weight: bold;
