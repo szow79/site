@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
   img {
-    margin: 20px;
+    margin: 0px 20px 10px 20px;
     width: 30px;
   }
 
@@ -28,7 +28,7 @@
 }
 
 .nav-btn {
-  margin-top: 10px;
+  margin-top: -10px;
   padding: 4% 4%;
   font-size: 3rem;
   font-weight: bold;
@@ -60,8 +60,11 @@
   }
 }
 
-@media (min-width: 700px) {
+@media (max-width: 769px) {
   .nav-btn {
-    padding: 2% 4%;
+    margin-top: 10px;
+  }
+  .nav-icon img{
+    margin: 20px 20px 10px 20px;
   }
 }
